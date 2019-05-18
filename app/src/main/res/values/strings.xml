@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">test1</string>
+    <string name="first_test">第一次作业</string>
+    <string name="second_test">第二次作业</string>
+    <string name="third_test">第三次作业</string>
+    <string name="forth_test">第四次作业</string>
+    <string name="five_test">第五次作业</string>
+    <string name="six_test">第六次作业</string>
+    <string name="end_test">考查</string>
+
+
+</resources>
