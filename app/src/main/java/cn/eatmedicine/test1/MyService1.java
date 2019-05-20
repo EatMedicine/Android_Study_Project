@@ -9,18 +9,32 @@ public class MyService1 extends Service {
     }
     @Override
     public int onStartCommand(Intent intent,int flags,int startId){
-        new Thread(new Runnable() {
-            @Override
-            public void run() {
-                Intent intent
-            }
-        }).start();
+
         return super.onStartCommand(intent,flags,startId);
     }
 
     @Override
     public IBinder onBind(Intent intent) {
-        // TODO: Return the communication channel to the service.
-        throw new UnsupportedOperationException("Not yet implemented");
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                while(true){
+
+                    String str = "Random Num: " +Math.random()*100;
+                    Intent intent = new Intent("MyBoradcast.text");
+                    intent.putExtra("text",str);
+                    sendBroadcast(intent);
+                    try{
+                        Thread.sleep(2000);
+                    }
+                    catch (Exception e){
+
+                    }
+
+                }
+
+            }
+        }).start();
+        return null;
     }
 }

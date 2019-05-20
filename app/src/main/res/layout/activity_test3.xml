@@ -6,8 +6,11 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".Test3">
-    <Button
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:id="@+id/test3_btn1"/>
+    <TextView
+        android:gravity="center"
+        android:id="@+id/test3_txt1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:textSize="50dp"
+        android:text="text"/>
 </LinearLayout>

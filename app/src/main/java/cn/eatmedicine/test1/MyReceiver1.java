@@ -12,6 +12,10 @@ public class MyReceiver1 extends BroadcastReceiver {
     }
     @Override
     public void onReceive(Context context, Intent intent) {
-        text.setText();
+        String action = intent.getAction();
+        if("MyBoradcast.text".equals(action)){
+            String content = intent.getStringExtra("text");
+            text.setText(content);
+        }
     }
 }
