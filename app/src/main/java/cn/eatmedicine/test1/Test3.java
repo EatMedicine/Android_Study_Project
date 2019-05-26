@@ -16,13 +16,13 @@ public class Test3 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_test3);
+        //设置广播接收
         Intent serviceIntent = new Intent(this,MyService1.class);
-
         IntentFilter intentFilter = new IntentFilter();
         intentFilter.addAction("MyBoradcast.text");
         TextView textView = findViewById(R.id.test3_txt1);
         registerReceiver(new MyReceiver1(textView),intentFilter);
-
+        //绑定服务
         bindService(serviceIntent, new ServiceConnection() {
             @Override
             public void onServiceConnected(ComponentName name, IBinder service) {

@@ -22,7 +22,9 @@
         <service
             android:name=".MyService1"
             android:enabled="true"
-            android:exported="true"></service>
+            android:exported="true" />
+
+        <activity android:name=".Test4"></activity>
     </application>
 
 </manifest>
