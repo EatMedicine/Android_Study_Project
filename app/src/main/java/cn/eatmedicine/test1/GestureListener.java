@@ -1,19 +1,19 @@
 package cn.eatmedicine.test1;
 
+import android.graphics.PointF;
 import android.util.Log;
 import android.view.GestureDetector;
 import android.view.MotionEvent;
-import android.widget.ImageView;
 
-public class GestureListener extends GestureDetector.SimpleOnGestureListener {
+public class GestureListener implements GestureDetector.OnGestureListener,GestureDetector.OnDoubleTapListener {
 
-    public ImageView iv;
-    public GestureListener(ImageView img){
-        iv = img;
+    private TouchListener touchListener;
+    public GestureListener(TouchListener touch){
+        touchListener = touch;
     }
+
     @Override
     public boolean onDown(MotionEvent e) {
-        Log.i("DEBUGIMG","DOWN");
         return true;
     }
 
@@ -29,10 +29,7 @@ public class GestureListener extends GestureDetector.SimpleOnGestureListener {
 
     @Override
     public boolean onScroll(MotionEvent e1, MotionEvent e2,
-                            float distanceX, float distanceY){
-        Log.i("DEBUGIMG",distanceX+"|"+distanceY);
-        iv.setX(iv.getX()-distanceX);
-        iv.setY(iv.getY()-distanceY);
+                            float distanceX, float distanceY) {
         return true;
     }
 
@@ -47,8 +44,21 @@ public class GestureListener extends GestureDetector.SimpleOnGestureListener {
     }
 
     @Override
-    public boolean onSingleTapConfirmed(MotionEvent e){
+    public boolean onSingleTapConfirmed(MotionEvent e) {
         return true;
     }
 
+    @Override
+    public boolean onDoubleTap(MotionEvent e) {
+        Log.i("DEBUGIMG","DoubleTap");
+        //双击放大1.5倍
+        touchListener.matrix.postScale(1.5f, 1.5f,e.getX(),e.getY());
+        touchListener.img.setImageMatrix(touchListener.matrix);
+        return true;
+    }
+
+    @Override
+    public boolean onDoubleTapEvent(MotionEvent e) {
+        return true;
+    }
 }
