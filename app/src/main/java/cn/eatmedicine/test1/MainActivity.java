@@ -51,6 +51,15 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(i);
             }
         });
+        findViewById(R.id.test5).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent i = new Intent();
+                i.setClass(MainActivity.this,Test5.class);
+                startActivity(i);
+            }
+        });
     }
     //用于按钮的监听器
     class btnListener implements View.OnClickListener {

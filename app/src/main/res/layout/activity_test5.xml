@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Test5">
+    <TextView
+        android:id="@+id/test5_txt1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="方向"
+        android:gravity="center"
+        android:textSize="50dp"
+        />
+    <TextView
+        android:id="@+id/test5_txt2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="光线"
+        android:gravity="center"
+        android:textSize="50dp"
+        />
+    <ImageView
+        android:id="@+id/test5_img1"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="false"
+        android:src="@drawable/img3"
+        android:layout_gravity="center"
+        android:rotation="0"
+        />
+</LinearLayout>
