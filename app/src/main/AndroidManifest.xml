@@ -25,7 +25,21 @@
             android:exported="true" />
 
         <activity android:name=".Test4" />
-        <activity android:name=".Test5"></activity>
+        <activity android:name=".Test5" />
+        <activity android:name=".Test6"></activity>
     </application>
+    <!--允许应用程序改变网络状态-->
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE"/>
 
+    <!--允许应用程序改变WIFI连接状态-->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+
+    <!--允许应用程序访问有关的网络信息-->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+
+    <!--允许应用程序访问WIFI网卡的网络信息-->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+
+    <!--允许应用程序完全使用网络-->
+    <uses-permission android:name="android.permission.INTERNET"/>
 </manifest>
