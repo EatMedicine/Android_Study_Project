@@ -81,7 +81,7 @@
             android:text="@string/six_test"
             />
         <Button
-            android:id="@+id/test_end"
+            android:id="@+id/test7"
             android:layout_margin="20dp"
             android:layout_gravity="center_horizontal"
             android:layout_width="200dp"
